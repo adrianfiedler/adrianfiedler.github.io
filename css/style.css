@@ -20,12 +20,12 @@ body {
 
 #adrian-img {
     object-fit: cover;
-    object-position: 0% 10%;
+    object-position: 0 10%;
     width: 150px;
     height: 150px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 30px;
+    margin-top: 3rem;
 }
 
 #logo {
@@ -43,7 +43,7 @@ body {
 .un::before {
     position: absolute;
     content: '';
-    width: 0px;
+    width: 0;
     left: 50%;
     height: 1px;
     display: block;
@@ -61,12 +61,13 @@ body {
 .un::after {
     position: absolute;
     content: '';
-    width: 0px;
+    width: 0;
     right: 50%;
     height: 1px;
     display: block;
     background: white;
     transition: 300ms;
+    bottom: -5px;
     opacity: 0;
 }
 
