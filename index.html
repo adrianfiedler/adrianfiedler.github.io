@@ -41,13 +41,28 @@
             </div>
         </div>
         <!-- about page -->
-        <div id="about" class="w-full h-full p-8 flex flex-col">
-            <div class="flex flex-col justify-center text-white flex-grow">
-                <h1 class="text-6xl text-center mb-5">Über mich</h1>
+        <div id="about" class="w-full h-full px-8 pb-8 pt-16 flex flex-col">
+            <div class="flex flex-col justify-center text-white flex-grow text-center">
+                <h1 class="text-3xl md:text-6xl mb-5">Über mich</h1>
+                <p class="">Ich bin <span id="age"></span> Jahre alt und Fullstack Java Entwickler mit Herzblut.</p>
+                <div class="flex flex-col md:flex-row justify-center items-center">
+                    <img class="" src="img/profile2.svg" alt="Profil Illustration" width="600" height="350" >
+                    <div>
+                        <p>Meine Schwerpunkte liegen auf</p>
+                        <ul class="">
+                            <li>> JEE / JSF</li>
+                            <li>> HTML / JavaScript</li>
+                            <li>> Mobile Apps</li>
+                        </ul>
+                    </div>
+                </div>
+                <a id="projectsBtn"
+                   class="transition-colors duration-200 hover:bg-white hover:text-black mt-1 p-2 self-center text-3xl text-center border rounded-sm"
+                   href="#">Projekte</a>
             </div>
         </div>
         <!-- projects page -->
-        <div id="projects" class="w-full h-full p-8 flex flex-col">
+        <div id="projects" class="w-full h-full px-8 pb-8 pt-16 flex flex-col">
             <div class="flex flex-col justify-center text-white flex-grow">
                 <h1 class="text-6xl text-center mb-5">Projekte</h1>
             </div>
@@ -73,6 +88,11 @@
         scrollToSection(ABOUT_SECTION);
       };
 
+      document.getElementById('projectsBtn').onclick = (e) => {
+        e.preventDefault();
+        scrollToSection(PROJECTS_SECTION);
+      };
+
       document.getElementById('projectsNav').onclick = (e) => {
         e.preventDefault();
         scrollToSection(PROJECTS_SECTION);
@@ -82,6 +102,15 @@
         const element = document.getElementById(section);
         element.scrollIntoView(true);
       }
+
+      function calculate_age(dob) {
+        const diff_ms = Date.now() - dob.getTime();
+        const age_dt = new Date(diff_ms);
+
+        return Math.abs(age_dt.getUTCFullYear() - 1970);
+      }
+      document.getElementById('age').innerText = calculate_age(new Date(1988, 3, 18));
+      console.log(calculate_age(new Date(1988, 3, 18)));
     </script>
     <noscript>JavaScript muss aktiviert sein um alle Funktionen nutzen zu können</noscript>
 </body>
