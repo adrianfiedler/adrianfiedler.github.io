@@ -36,6 +36,11 @@ body {
     text-align: center;
 }
 
+.skill-list img {
+    height: 50px;
+    padding: 5px;
+}
+
 /* underline effects */
 .un {
     position: relative;

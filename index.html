@@ -12,15 +12,15 @@
 <body>
     <div id="bg" class="fixed top-0 border-8 border-white"></div>
     <div id="header" class="p-8 fixed top-0 w-full flex justify-between sm:justify-center text-white items-center">
-        <a id="introNav" href="#" class="sm:mr-16" title="Zum Anfang scrollen">
+        <a id="introNav" href="#intro" class="sm:mr-16" title="Zum Anfang scrollen">
             <span id="logo" class="bg-white rounded-sm p-1 font-bold">AF</span>
         </a>
         <nav class="">
             <ul class="flex justify-center">
-                <li><a id="aboutNav" class="uppercase mx-2 md:mx-8 text-xs sm:text-base un" href="#">Über
+                <li><a id="aboutNav" class="uppercase mx-2 md:mx-8 text-xs sm:text-base un" href="#about">Über
                     mich</a></li>
-                <li><a id="projectsNav" class="uppercase mx-2 md:mx-8 text-xs sm:text-base un" href="#">Projekte</a></li>
-                <li><a class="uppercase mx-2 md:mx-8 text-xs sm:text-base un" href="#">Kontakt</a></li>
+                <li><a id="projectsNav" class="uppercase mx-2 md:mx-8 text-xs sm:text-base un" href="#projects">Projekte</a></li>
+                <li><a class="uppercase mx-2 md:mx-8 text-xs sm:text-base un" href="#contact">Kontakt</a></li>
             </ul>
         </nav>
         <a class="sm:ml-16" href="https://github.com/adrianfiedler">
@@ -32,12 +32,12 @@
         <!-- intro page -->
         <div id="intro" class="w-full h-full px-8 pb-8 pt-16 flex flex-col">
             <div class="flex flex-col justify-center text-white flex-grow">
-                <h1 class="text-3xl md:text-6xl text-center mb-5">Hi,</h1>
+                <h1 class="text-3xl md:text-5xl text-center mb-5">Hi,</h1>
                 <h2 class="text-1xl md:text-4xl text-center">mein Name ist Adrian<br/>und ich bin Java Entwickler</h2>
                 <img id="adrian-img" alt="Profilfoto Adrian" class="rounded-full" src="img/adrian.jpg" width="150px" height="150px">
                 <a id="aboutBtn"
                    class="transition-colors duration-200 hover:bg-white hover:text-black mt-12 p-2 self-center text-3xl text-center border rounded-sm"
-                   href="#">Über mich</a>
+                   href="#about">Über mich</a>
             </div>
         </div>
         <!-- about page -->
@@ -46,19 +46,19 @@
                 <h1 class="text-3xl md:text-6xl mb-5">Über mich</h1>
                 <p class="">Ich bin <span id="age"></span> Jahre alt und Fullstack Java Entwickler mit Herzblut.</p>
                 <div class="flex flex-col md:flex-row justify-center items-center">
-                    <img class="" src="img/profile2.svg" alt="Profil Illustration" width="600" height="350" >
-                    <div>
-                        <p>Meine Schwerpunkte liegen auf</p>
-                        <ul class="text-left">
-                            <li>> JEE / JSF</li>
-                            <li>> HTML / JavaScript</li>
-                            <li>> Mobile Apps</li>
+                    <img class="p-1 w-1/2 max-w-xs" src="img/profile2.svg" alt="Profil Illustration" width="600" height="350" >
+                    <div class="md:ml-2">
+                        <p class="text-center md:text-left">Meine Schwerpunkte liegen auf</p>
+                        <ul class="skill-list text-left">
+                            <li>> JEE / JSF <img alt="JEE Logo" class="hidden md:inline-block" height="50px" src="img/jee.svg"></li>
+                            <li>> HTML / CSS / JavaScript<img alt="HTML5 Logo" class="hidden md:inline-block" height="50px" src="img/html5.svg"><img alt="CSS Logo" class="hidden md:inline-block" height="50px" src="img/css.svg"><img alt="JavaScript Logo" class="hidden md:inline-block" height="50px" src="img/javascript.svg"></li>
+                            <li>> iOS / Android <img alt="iOS Logo" class="hidden md:inline-block" height="50px" src="img/iOS.svg"><img alt="Android Logo" class="hidden md:inline-block" height="50px" src="img/android.svg"></li>
                         </ul>
                     </div>
                 </div>
                 <a id="projectsBtn"
-                   class="transition-colors duration-200 hover:bg-white hover:text-black mt-1 p-2 self-center text-3xl text-center border rounded-sm"
-                   href="#">Projekte</a>
+                   class="transition-colors duration-200 hover:bg-white hover:text-black mt-3 md:mt-0 p-2 self-center text-3xl text-center border rounded-sm"
+                   href="#projects">Projekte</a>
             </div>
         </div>
         <!-- projects page -->
@@ -69,40 +69,6 @@
         </div>
     </main>
     <script>
-      // to support smooth scrolling on iOS devices
-      const ABOUT_SECTION = 'about';
-      const PROJECTS_SECTION = 'projects';
-      const INTRO_SECTION = 'intro';
-      document.getElementById('introNav').onclick = (e) => {
-        e.preventDefault();
-        scrollToSection(INTRO_SECTION);
-      };
-
-      document.getElementById('aboutNav').onclick = (e) => {
-        e.preventDefault();
-        scrollToSection(ABOUT_SECTION);
-      };
-
-      document.getElementById('aboutBtn').onclick = (e) => {
-        e.preventDefault();
-        scrollToSection(ABOUT_SECTION);
-      };
-
-      document.getElementById('projectsBtn').onclick = (e) => {
-        e.preventDefault();
-        scrollToSection(PROJECTS_SECTION);
-      };
-
-      document.getElementById('projectsNav').onclick = (e) => {
-        e.preventDefault();
-        scrollToSection(PROJECTS_SECTION);
-      };
-
-      function scrollToSection(section) {
-        const element = document.getElementById(section);
-        element.scrollIntoView(true);
-      }
-
       function calculate_age(dob) {
         const diff_ms = Date.now() - dob.getTime();
         const age_dt = new Date(diff_ms);
