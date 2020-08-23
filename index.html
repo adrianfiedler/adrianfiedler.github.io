@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="Description" content="Profilseite von Freelancer Adrian Fiedler">
     <title>Title</title>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<!--        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">-->
     <link href="css/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
@@ -28,9 +28,9 @@
                  alt="Link zu meinem GitHub Portfolio">
         </a>
     </div>
-    <main class="w-full h-full">
+    <main class="w-full h-full max-w-screen-md m-auto">
         <!-- intro page -->
-        <div id="intro" class="w-full h-full px-8 pb-8 pt-16 flex flex-col">
+        <div id="intro" class="w-full h-full min-h-full px-8 pb-8 pt-16 flex flex-col">
             <div class="flex flex-col justify-center text-white flex-grow">
                 <h1 class="text-3xl md:text-5xl text-center mb-5">Hi,</h1>
                 <h2 class="text-1xl md:text-4xl text-center">mein Name ist Adrian<br/>und ich bin Java Entwickler</h2>
@@ -41,28 +41,37 @@
             </div>
         </div>
         <!-- about page -->
-        <div id="about" class="w-full h-full px-8 pb-8 pt-16 flex flex-col">
+        <div id="about" class="w-full min-h-full px-8 pb-8 pt-16 flex flex-col">
             <div class="flex flex-col justify-center text-white flex-grow text-center">
                 <h1 class="text-3xl md:text-6xl mb-5">Über mich</h1>
-                <p class="">Ich bin <span id="age"></span> Jahre alt und Fullstack Java Entwickler mit Herzblut.</p>
-                <div class="flex flex-col md:flex-row justify-center items-center">
-                    <img class="p-1 w-1/2 max-w-xs" src="img/profile2.svg" alt="Profil Illustration" width="600" height="350" >
-                    <div class="md:ml-2">
-                        <p class="text-center md:text-left">Meine Schwerpunkte liegen auf</p>
-                        <ul class="skill-list text-left">
-                            <li>> JEE / JSF <img alt="JEE Logo" class="hidden md:inline-block" height="50px" src="img/jee.svg"></li>
-                            <li>> HTML / CSS / JavaScript<img alt="HTML5 Logo" class="hidden md:inline-block" height="50px" src="img/html5.svg"><img alt="CSS Logo" class="hidden md:inline-block" height="50px" src="img/css.svg"><img alt="JavaScript Logo" class="hidden md:inline-block" height="50px" src="img/javascript.svg"></li>
-                            <li>> iOS / Android <img alt="iOS Logo" class="hidden md:inline-block" height="50px" src="img/iOS.svg"><img alt="Android Logo" class="hidden md:inline-block" height="50px" src="img/android.svg"></li>
-                        </ul>
+                <div class="flex flex-col md:flex-row">
+                    <div class="text-center flex-1">
+                        <img class="p-1" src="img/profile2.svg" alt="Profil Illustration" >
+                    </div>
+                    <div id="skills" class="m-auto flex-1">
+                        <span class="text-right">Name:</span><span class="text-left">Adrian Fiedler</span>
+                        <span class="text-right">Alter:</span><span id="age" class="text-left"></span>
+                        <span class="text-right">Wohnort:</span><span class="text-left">München</span>
+                        <span class="text-right">Abschluss:</span><span class="text-left">Master Medieninformatik</span>
+                        <span class="text-right">Berufserfahrung:</span><div class="text-left"><span id="experience"></span><span> Jahre</span></div>
+                        <span class="text-right">Schwerpunkte:</span><span class="text-left">JEE, JSF<br />HTML, CSS, JavaScript<br />Barrierefreiheit<br />Mobile Apps</span>
                     </div>
                 </div>
+                <div class="text-left">
+                    <p class="pt-2">Ich bin ein Java Fullstack Developer mit Schwerpunkt auf JEE und Web Apps (JSF oder reines HTML/JavaScript). Bin jedoch auch sehr an Serverless
+                        Alternativen interessiert, wie z.B. <a target="_blank" class="underline" href="https://quarkus.io/">Quarkus</a>, für das ich auch Open Source Contributor bin.
+                        Außerdem bin ich zertifizierter SCRUM Master (<a target="_blank" class="underline" href="pdf/PSMI.pdf">Zertifikat</a>) und arbeite seit Jahren in großen agilen
+                        Projekten (Scrum + <a target="_blank" class="underline" href="https://en.wikipedia.org/wiki/Scaled_agile_framework">SAFe</a>).</p>
+                    <p class="pt-2">Vor der Zeit als Java Entwickler, war ich spezialisiert auf mobile Apps und professioneller iOS Entwickler. Ich führe dies nun als Hobby fort und habe mehrere Apps im App Store.</p>
+                    <p class="pt-2">Teil meiner UI Expertise ist es auch, Webseiten barrierefrei zu erstellen. Hier konnte ich bereits mehrere Projekte sicher durch die abschließende Prüfung auf Barrierefreiheit führen.</p>
+                </div>
                 <a id="projectsBtn"
-                   class="transition-colors duration-200 hover:bg-white hover:text-black mt-3 md:mt-0 p-2 self-center text-3xl text-center border rounded-sm"
+                   class="transition-colors duration-200 hover:bg-white hover:text-black mt-4 p-2 self-center text-3xl text-center border rounded-sm"
                    href="#projects">Projekte</a>
             </div>
         </div>
         <!-- projects page -->
-        <div id="projects" class="w-full h-full px-8 pb-8 pt-16 flex flex-col">
+        <div id="projects" class="w-full min-h-full px-8 pb-8 pt-16 flex flex-col">
             <div class="flex flex-col justify-center text-white flex-grow">
                 <h1 class="text-6xl text-center mb-5">Projekte</h1>
             </div>
@@ -76,6 +85,7 @@
         return Math.abs(age_dt.getUTCFullYear() - 1970);
       }
       document.getElementById('age').innerText = calculate_age(new Date(1988, 3, 18));
+      document.getElementById('experience').innerText = calculate_age(new Date(2014, 4, 1));
       console.log(calculate_age(new Date(1988, 3, 18)));
     </script>
     <noscript>JavaScript muss aktiviert sein um alle Funktionen nutzen zu können</noscript>

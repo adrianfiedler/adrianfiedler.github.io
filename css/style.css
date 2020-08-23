@@ -36,6 +36,13 @@ body {
     text-align: center;
 }
 
+#skills {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(5, minmax(min-content, max-content));
+    column-gap: 10px;
+}
+
 .skill-list img {
     height: 50px;
     padding: 5px;
