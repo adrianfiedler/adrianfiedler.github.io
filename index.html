@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="Description" content="Profilseite von Freelancer Adrian Fiedler">
-    <title>Title</title>
+    <title>Adrian Fiedler</title>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="css/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-    <div id="bg" class="fixed top-0 border-8 border-white"></div>
-    <div id="header" class="p-8 fixed top-0 w-full flex justify-between sm:justify-center text-white items-center">
+    <div id="border" class="pointer-events-none z-10 fixed top-0 w-full h-full border-8 border-white"></div>
+    <div id="bg" class="fixed"></div>
+    <div id="header" class="p-4 fixed top-0 w-full flex justify-between sm:justify-center text-white items-center">
         <a id="introNav" href="#intro" class="sm:mr-16" title="Zum Anfang scrollen">
             <span id="logo" class="bg-white rounded-sm p-1 font-bold">AF</span>
         </a>
@@ -41,52 +42,106 @@
             </div>
         </div>
         <!-- about page -->
-        <div id="about" class="w-full min-h-full px-8 pb-8 pt-16 flex flex-col">
-            <div class="flex flex-col justify-center text-white flex-grow text-center">
-                <h1 class="text-3xl md:text-6xl mb-5">Über mich</h1>
-                <div class="flex flex-col md:flex-row">
-                    <div class="text-center flex-1">
-                        <img class="p-1" src="img/profile2.svg" alt="Profil Illustration" >
+        <div id="content" class="text-sm">
+            <div id="about" class="w-full min-h-full px-8 pb-8 pt-24 flex flex-col">
+                <div class="flex flex-col justify-center text-white flex-grow text-center">
+                    <h1 class="text-3xl md:text-6xl mb-5">Über mich</h1>
+                    <div class="flex flex-col md:flex-row">
+                        <div class="text-center flex-1">
+                            <img class="p-1" src="img/profile2.svg" alt="Profil Illustration" >
+                        </div>
+                        <div id="skills" class="m-auto flex-1">
+                            <span class="text-right">Name:</span><span class="text-left">Adrian Fiedler</span>
+                            <span class="text-right">Alter:</span><span id="age" class="text-left"></span>
+                            <span class="text-right">Wohnort:</span><span class="text-left">München</span>
+                            <span class="text-right">Abschluss:</span><span class="text-left">Master Medieninformatik</span>
+                            <span class="text-right">Berufserfahrung:</span><div class="text-left"><span id="experience"></span><span> Jahre</span></div>
+                            <span class="text-right">Schwerpunkte:</span><span class="text-left">JEE, JSF<br />HTML, CSS, JavaScript<br />Barrierefreiheit<br />Mobile Apps</span>
+                        </div>
                     </div>
-                    <div id="skills" class="m-auto flex-1">
-                        <span class="text-right">Name:</span><span class="text-left">Adrian Fiedler</span>
-                        <span class="text-right">Alter:</span><span id="age" class="text-left"></span>
-                        <span class="text-right">Wohnort:</span><span class="text-left">München</span>
-                        <span class="text-right">Abschluss:</span><span class="text-left">Master Medieninformatik</span>
-                        <span class="text-right">Berufserfahrung:</span><div class="text-left"><span id="experience"></span><span> Jahre</span></div>
-                        <span class="text-right">Schwerpunkte:</span><span class="text-left">JEE, JSF<br />HTML, CSS, JavaScript<br />Barrierefreiheit<br />Mobile Apps</span>
+                    <div class="text-left">
+                        <p class="pt-2">Ich bin ein Java Fullstack Developer mit Schwerpunkt auf JEE und Web Apps (JSF oder reines HTML/JavaScript). Bin jedoch auch sehr an Serverless
+                            Alternativen interessiert, wie z.B. <a target="_blank" rel="noopener" class="underline" href="https://quarkus.io/">Quarkus</a>, für das ich auch Open Source Contributor bin.
+                            Außerdem bin ich zertifizierter SCRUM Master (<a target="_blank" class="underline" href="pdf/PSMI.pdf">Zertifikat</a>) und arbeite seit Jahren in großen agilen
+                            Projekten (Scrum + <a target="_blank" rel="noopener" class="underline" href="https://en.wikipedia.org/wiki/Scaled_agile_framework">SAFe</a>).</p>
+                        <p class="pt-2">Vor der Zeit als Java Entwickler, war ich spezialisiert auf mobile Apps und professioneller iOS Entwickler. Ich führe dies nun als Hobby fort und habe mehrere Apps im App Store.</p>
+                        <p class="pt-2">Teil meiner UI Expertise ist es auch, Webseiten barrierefrei zu erstellen. Hier konnte ich bereits mehrere Projekte sicher durch die abschließende Prüfung auf Barrierefreiheit führen.</p>
                     </div>
+                    <a id="projectsBtn"
+                    class="transition-colors duration-200 hover:bg-white hover:text-black mt-4 p-2 self-center text-3xl text-center border rounded-sm"
+                    href="#projects">Projekte</a>
                 </div>
-                <div class="text-left">
-                    <p class="pt-2">Ich bin ein Java Fullstack Developer mit Schwerpunkt auf JEE und Web Apps (JSF oder reines HTML/JavaScript). Bin jedoch auch sehr an Serverless
-                        Alternativen interessiert, wie z.B. <a target="_blank" rel="noopener" class="underline" href="https://quarkus.io/">Quarkus</a>, für das ich auch Open Source Contributor bin.
-                        Außerdem bin ich zertifizierter SCRUM Master (<a target="_blank" class="underline" href="pdf/PSMI.pdf">Zertifikat</a>) und arbeite seit Jahren in großen agilen
-                        Projekten (Scrum + <a target="_blank" rel="noopener" class="underline" href="https://en.wikipedia.org/wiki/Scaled_agile_framework">SAFe</a>).</p>
-                    <p class="pt-2">Vor der Zeit als Java Entwickler, war ich spezialisiert auf mobile Apps und professioneller iOS Entwickler. Ich führe dies nun als Hobby fort und habe mehrere Apps im App Store.</p>
-                    <p class="pt-2">Teil meiner UI Expertise ist es auch, Webseiten barrierefrei zu erstellen. Hier konnte ich bereits mehrere Projekte sicher durch die abschließende Prüfung auf Barrierefreiheit führen.</p>
-                </div>
-                <a id="projectsBtn"
-                   class="transition-colors duration-200 hover:bg-white hover:text-black mt-4 p-2 self-center text-3xl text-center border rounded-sm"
-                   href="#projects">Projekte</a>
             </div>
-        </div>
-        <!-- projects page -->
-        <div id="projects" class="w-full min-h-full px-8 pb-8 pt-16 flex flex-col">
-            <div class="flex flex-col justify-center text-white flex-grow">
-                <h1 class="text-6xl text-center mb-5">Projekte</h1>
+            <!-- projects page -->
+            <div id="projects" class="w-full min-h-screen px-8 pb-8 pt-24 flex flex-col">
+                <div class="flex flex-col text-white flex-grow text-center">
+                    <h1 class="text-3xl md:text-6xl mb-5">Projekte</h1>
+                    <div class="flex flex-col md:flex-row">
+                            <div class="project-image text-center flex-1">
+                                <img class="p-1" src="img/projects.svg" alt="Projekt Illustration" >
+                            </div>
+                            <ul class="project-content m-auto flex-1 text-left">
+                                <li>
+                                    <div class="flex items-baseline pb-1">
+                                        <h2 class="text-lg pr-2">Fullstack Java Entwickler</h2>
+                                        <span class="text-lg">Juni 2018 bis heute</span>
+                                    </div>
+                                    <p>Ich bin als Fullstack Entwickler Teil eines Scrum Teams innerhalb eines sehr großen Projekts (> 300 Personen) des größten deutschen Telekommunikations-Anbieters für den Glasfaserausbau. Eingesetzte Technologien:</p>
+                                    <ul>
+                                        <li>- Java Backend (JEE, EJB, Hibernate, JBoss EAP, REST)</li>
+                                        <li>- Prozesse (JBPM)</li>
+                                        <li>- Java Frontend (JSF, PrimeFaces, HTML, JavaScript)</li>
+                                        <li>- Mobile Webapp (HTML, JavaScript, SAPUI5)</li>
+                                        <li>- Barrierefreiheit</li>
+                                        <li>- Docker</li>
+                                        <li>- Mikroservices</li>
+                                        <li>- CI/CD</li>
+                                        <li>- Testautomatisierung</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                </div>
             </div>
         </div>
     </main>
     <script>
+      function intersectionCallback (entries, observer) {
+          const intersect = entries[0];
+          console.log('observed! Is intersecting: ' + intersect.isIntersecting);
+          console.log(intersect);
+          const header = document.getElementById('header');
+          if(intersect.isIntersecting) {
+            header.classList.add('dark');
+          } else {
+            header.classList.remove('dark');
+          }
+      };
+
+      function setScrollObserver() {
+        let options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: .01
+        }
+
+        let observer = new IntersectionObserver(intersectionCallback, options);
+        let target = document.querySelector('#content');
+        observer.observe(target)
+      };
+
       function calculate_age(dob) {
         const diff_ms = Date.now() - dob.getTime();
         const age_dt = new Date(diff_ms);
 
         return Math.abs(age_dt.getUTCFullYear() - 1970);
-      }
+      };
+
       document.getElementById('age').innerText = calculate_age(new Date(1988, 3, 18));
       document.getElementById('experience').innerText = calculate_age(new Date(2014, 4, 1));
       console.log(calculate_age(new Date(1988, 3, 18)));
+
+      setScrollObserver();
     </script>
     <noscript>JavaScript muss aktiviert sein um alle Funktionen nutzen zu können</noscript>
 </body>

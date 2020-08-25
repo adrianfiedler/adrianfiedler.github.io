@@ -7,6 +7,14 @@ body {
     min-width: 370px;
 }
 
+#header {
+    transition: background .3s;
+    top: 8px;
+}
+#header.dark {
+    background: rgba(89, 0, 190, 0.95);
+}
+
 #bg {
     width: 100%;
     height: 100%;
@@ -46,6 +54,14 @@ body {
 .skill-list img {
     height: 50px;
     padding: 5px;
+}
+
+.project-image {
+    flex: 1 1 auto;
+}
+
+.project-content {
+    flex: 1 1 auto;
 }
 
 /* underline effects */
