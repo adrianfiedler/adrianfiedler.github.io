@@ -41,14 +41,14 @@
                    href="#about">Über mich</a>
             </div>
         </div>
-        <!-- about page -->
         <div id="content" class="text-sm">
+            <!-- about page -->
             <div id="about" class="w-full min-h-full px-8 pb-8 pt-24 flex flex-col">
                 <div class="flex flex-col justify-center text-white flex-grow text-center">
                     <h1 class="text-3xl md:text-6xl mb-5">Über mich</h1>
                     <div class="flex flex-col md:flex-row">
-                        <div class="text-center flex-1">
-                            <img class="p-1" src="img/profile2.svg" alt="Profil Illustration" >
+                        <div class="text-center flex-1 m-auto w-3/4 md:w-full">
+                            <img class="p-5" src="img/profile2.svg" alt="Profil Illustration" >
                         </div>
                         <div id="skills" class="m-auto flex-1">
                             <span class="text-right">Name:</span><span class="text-left">Adrian Fiedler</span>
@@ -60,47 +60,139 @@
                         </div>
                     </div>
                     <div class="text-left">
-                        <p class="pt-2">Ich bin ein Java Fullstack Developer mit Schwerpunkt auf JEE und Web Apps (JSF oder reines HTML/JavaScript). Bin jedoch auch sehr an Serverless
+                        <p class="pt-2">Ich bin ein Java Fullstack Developer mit Schwerpunkt auf JEE und Web Apps (JSF oder reines HTML/JavaScript). Bin jedoch auch sehr an "Serverless"
                             Alternativen interessiert, wie z.B. <a target="_blank" rel="noopener" class="underline" href="https://quarkus.io/">Quarkus</a>, für das ich auch Open Source Contributor bin.
                             Außerdem bin ich zertifizierter SCRUM Master (<a target="_blank" class="underline" href="pdf/PSMI.pdf">Zertifikat</a>) und arbeite seit Jahren in großen agilen
                             Projekten (Scrum + <a target="_blank" rel="noopener" class="underline" href="https://en.wikipedia.org/wiki/Scaled_agile_framework">SAFe</a>).</p>
                         <p class="pt-2">Vor der Zeit als Java Entwickler, war ich spezialisiert auf mobile Apps und professioneller iOS Entwickler. Ich führe dies nun als Hobby fort und habe mehrere Apps im App Store.</p>
                         <p class="pt-2">Teil meiner UI Expertise ist es auch, Webseiten barrierefrei zu erstellen. Hier konnte ich bereits mehrere Projekte sicher durch die abschließende Prüfung auf Barrierefreiheit führen.</p>
                     </div>
-                    <a id="projectsBtn"
-                    class="transition-colors duration-200 hover:bg-white hover:text-black mt-4 p-2 self-center text-3xl text-center border rounded-sm"
-                    href="#projects">Projekte</a>
                 </div>
             </div>
             <!-- projects page -->
             <div id="projects" class="w-full min-h-screen px-8 pb-8 pt-24 flex flex-col">
                 <div class="flex flex-col text-white flex-grow text-center">
                     <h1 class="text-3xl md:text-6xl mb-5">Projekte</h1>
-                    <div class="flex flex-col md:flex-row">
-                            <div class="project-image text-center flex-1">
-                                <img class="p-1" src="img/projects.svg" alt="Projekt Illustration" >
-                            </div>
-                            <ul class="project-content m-auto flex-1 text-left">
-                                <li>
-                                    <div class="flex items-baseline pb-1">
-                                        <h2 class="text-lg pr-2">Fullstack Java Entwickler</h2>
-                                        <span class="text-lg">Juni 2018 bis heute</span>
+                        <ul class="m-auto text-left">
+                            <li class="flex flex-col md:flex-row mb-5">
+                                <div class="text-center m-auto flex-grow-0 flex-shrink-0">
+                                    <img class="p-5" width="300px" src="img/online.svg" alt="Projekt Illustration" >
+                                </div>
+                                <div class="">
+                                    <div class="pb-1">
+                                        <h2 class="text-xl pr-2">Fullstack Java Entwickler</h2>
+                                        <h3 class="text-lg">Juni 2018 bis heute</h3>
+                                        <h4 class="text-base">Festanstellung</h4>
                                     </div>
-                                    <p>Ich bin als Fullstack Entwickler Teil eines Scrum Teams innerhalb eines sehr großen Projekts (> 300 Personen) des größten deutschen Telekommunikations-Anbieters für den Glasfaserausbau. Eingesetzte Technologien:</p>
-                                    <ul>
-                                        <li>- Java Backend (JEE, EJB, Hibernate, JBoss EAP, REST)</li>
+                                    <p class="pb-2">Ich bin als Fullstack Entwickler Teil eines Scrum Teams innerhalb eines sehr großen Projekts (> 300 Personen) des größten deutschen Telekommunikations-Anbieters im Bereich des Glasfaserausbaus.</p>
+                                    <p>Schwerpunkte:</p>
+                                    <ul class="pb-2">
+                                        <li>- Java Backend (JEE, EJB, Hibernate, REST)</li>
                                         <li>- Prozesse (JBPM)</li>
                                         <li>- Java Frontend (JSF, PrimeFaces, HTML, JavaScript)</li>
                                         <li>- Mobile Webapp (HTML, JavaScript, SAPUI5)</li>
                                         <li>- Barrierefreiheit</li>
+                                    </ul>
+                                    <p>Eingesetzte Technologien:</p>
+                                    <ul class="pb-2">
                                         <li>- Docker</li>
-                                        <li>- Mikroservices</li>
+                                        <li>- Microservices</li>
                                         <li>- CI/CD</li>
                                         <li>- Testautomatisierung</li>
+                                        <li>- JBoss EAP</li>
+                                        <li>- OpenShift</li>
                                     </ul>
-                                </li>
-                            </ul>
-                        </div>
+                                </div>
+                            </li>
+                            <li class="flex flex-col md:flex-row mb-5">
+                                <div class="text-center m-auto flex-grow-0 flex-shrink-0">
+                                    <img class="p-5" width="300px" src="img/speed_test.svg" alt="Projekt Illustration" >
+                                </div>
+                                <div class="">
+                                    <div class="pb-1">
+                                        <h2 class="text-xl pr-2">Fullstack Java Entwickler</h2>
+                                        <h3 class="text-lg">März 2017 bis Mai 2018</h3>
+                                        <h4 class="text-base">Festanstellung</h4>
+                                    </div>
+                                    <p class="pb-2">Ich war als Fullstack Entwickler Teil eines Teams, für ein mittelgroßes Projekt des größten deutschen Telekommunikations-Anbieters (> 50 Personen) mit Wasserfall Modell im Bereich des Breitbandausbaus im Nahbereich.</p>
+                                    <p>Schwerpunkte:</p>
+                                    <ul class="pb-2">
+                                        <li>- Java Backend (JEE, REST)</li>
+                                        <li>- Prozesse (JBPM)</li>
+                                        <li>- Java Frontend (JSF, PrimeFaces, HTML, JavaScript)</li>
+                                        <li>- Mobile Webapp (HTML, JavaScript, SAPUI5)</li>
+                                        <li>- Barrierefreiheit</li>
+                                    </ul>
+                                    <p>Eingesetzte Technologien:</p>
+                                    <ul class="pb-2">
+                                        <li>- Docker</li>
+                                        <li>- CI/CD</li>
+                                        <li>- Jenkins</li>
+                                        <li>- JBoss EAP</li>
+                                        <li>- AWS</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="flex flex-col md:flex-row mb-5">
+                                <div class="text-center m-auto flex-grow-0 flex-shrink-0">
+                                    <img class="p-5" width="300px" src="img/progress.svg" alt="Projekt Illustration" >
+                                </div>
+                                <div class="">
+                                    <div class="pb-1">
+                                        <h2 class="text-xl pr-2">Fullstack Java Entwickler</h2>
+                                        <h3 class="text-lg">März 2016 bis März 2017</h3>
+                                        <h4 class="text-base">Festanstellung</h4>
+                                    </div>
+                                    <p class="pb-2">Ich war als Fullstack Entwickler Teil eines Teams, für ein mittelgroßes Projekt des größten deutschen Telekommunikations-Anbieters (> 50 Personen) mit Wasserfall Modell im Bereich des Breitbandausbaus.</p>
+                                    <p>Schwerpunkte:</p>
+                                    <ul class="pb-2">
+                                        <li>- Java Backend (JEE, REST)</li>
+                                        <li>- Prozesse (JBPM)</li>
+                                        <li>- Java Frontend (JSF, PrimeFaces, HTML, JavaScript)</li>
+                                        <li>- Mobile Webapp (HTML, JavaScript, SAPUI5)</li>
+                                        <li>- Barrierefreiheit</li>
+                                    </ul>
+                                    <p>Eingesetzte Technologien:</p>
+                                    <ul class="pb-2">
+                                        <li>- JBoss EAP</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="flex flex-col md:flex-row mb-5">
+                                <div class="text-center m-auto flex-grow-0 flex-shrink-0">
+                                    <img class="p-5" width="300px" src="img/phone.svg" alt="Projekt Illustration" >
+                                </div>
+                                <div class="">
+                                    <div class="pb-1">
+                                        <h2 class="text-xl pr-2">iOS Entwickler</h2>
+                                        <h3 class="text-lg">Oktober 2014 bis Februar 2017</h3>
+                                        <h4 class="text-base">Festanstellung</h4>
+                                    </div>
+                                    <p class="pb-2">Ich war als iOS Entwickler Teil eines Teams, für ein kleineres Projekt des größten bayerischen Agrar-Handelskonzerns.</p>
+                                    <p>Schwerpunkte:</p>
+                                    <ul class="pb-2">
+                                        <li>- iPhone App</li>
+                                        <li>- iPad App</li>
+                                        <li>- Anbindung externer Services</li>
+                                        <li>- Offline Speicherung</li>
+                                        <li>- Push Benachrichtigungen</li>
+                                    </ul>
+                                    <p>Eingesetzte Technologien:</p>
+                                    <ul class="pb-2">
+                                        <li>- iOS</li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+            <!-- contact page -->
+            <div id="contact" class="w-full min-h-screen px-8 pb-8 pt-24 flex flex-col">
+                <div class="flex flex-col justify-center items-center text-white flex-grow text-center relative">
+                    <h1 class="text-3xl md:text-6xl mb-5">Kontakt</h1>
+                    <img class="p-5 max-w-sm block" src="img/mail.svg" alt="Kontakt Illustration" >
+                    <p><a class="text-xl" href="mailto:adrian_fiedler@msn.com">adrian_fiedler (at) msn.com</a></p>
+                    <p class="absolute bottom-0">&copy;<span id="currYear"></span> Adrian Fiedler</p>
                 </div>
             </div>
         </div>
@@ -116,7 +208,7 @@
           } else {
             header.classList.remove('dark');
           }
-      };
+      }
 
       function setScrollObserver() {
         let options = {
@@ -128,17 +220,18 @@
         let observer = new IntersectionObserver(intersectionCallback, options);
         let target = document.querySelector('#content');
         observer.observe(target)
-      };
+      }
 
       function calculate_age(dob) {
         const diff_ms = Date.now() - dob.getTime();
         const age_dt = new Date(diff_ms);
 
         return Math.abs(age_dt.getUTCFullYear() - 1970);
-      };
+      }
 
       document.getElementById('age').innerText = calculate_age(new Date(1988, 3, 18));
       document.getElementById('experience').innerText = calculate_age(new Date(2014, 4, 1));
+      document.getElementById('currYear').innerText = new Date().getFullYear();
       console.log(calculate_age(new Date(1988, 3, 18)));
 
       setScrollObserver();
